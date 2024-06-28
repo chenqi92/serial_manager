@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Serial Port Manager</title>
+</head>
+<body>
+<h1>Available Serial Ports:</h1>
+<ul id="ports-list"></ul>
+<script>
+    fetch('/')
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById('ports-list').innerHTML = data;
+        });
+</script>
+</body>
+</html>
